@@ -11,7 +11,7 @@ public class MonoSingleton<T> : MonoBehaviour where T: MonoSingleton<T>
         {
             if (_instance == null)
             {
-                Debug.Log(typeof(T).ToString() + " is NULL.                                MonoSingleton");
+                Debug.Log(typeof(T).ToString() + " is NULL.");
             }
             return _instance;
         }

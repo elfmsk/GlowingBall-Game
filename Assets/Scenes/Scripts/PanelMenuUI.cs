@@ -34,7 +34,14 @@ public class PanelMenuUI : MonoSingleton<PanelMenuUI>
         bestScore = PlayerPrefs.GetInt("HighScore", 0);
         bestScoreText.text += bestScore;
     }
-
+    
+    //private void Update()
+    //{
+    //    if (Input.GetKey(KeyCode.Return) || Input.GetKey("enter"))
+    //    {
+    //        StartGame();
+    //    }
+    //}
     public void StartGame()
     {
         GameMaster.Instance.StartGame();

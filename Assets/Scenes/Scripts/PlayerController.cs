@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     {
         AudioBG = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
     }
-
+    
     void Start()
     {
         score = 0;
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
             ChangeVolume();
         }
     }
-
+    
     private void OnCollisionEnter(Collision collision)
     {
         canChangeGravity = true;
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
     private void ChangeGravity()
     {
-        if (Input.GetMouseButtonDown(0) && canChangeGravity && !GameMaster.Instance.GameOver)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space)) && canChangeGravity && !GameMaster.Instance.GameOver)
         {
             score += 1;
             CountScoreUI.Instance.ChangeScore(score);

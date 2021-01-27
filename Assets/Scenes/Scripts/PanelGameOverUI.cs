@@ -17,6 +17,14 @@ public class PanelGameOverUI : MonoBehaviour
         resultScore.text = CountScoreUI.Instance.ScoreText;
     }
 
+    //private void Update()
+    //{
+    //    if (Input.GetKey(KeyCode.Return) || Input.GetKey("enter"))
+    //    {
+    //        RestartGame();
+    //    }
+    //}
+
     public void RestartGame()
     {
         LevelLoader.Instance.LoadLevel();

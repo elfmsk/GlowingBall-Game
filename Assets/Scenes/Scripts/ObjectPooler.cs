@@ -36,7 +36,7 @@ public class ObjectPooler: MonoBehaviour
             }
         }
     }
-
+    
     private void ActivatePlatform()
     {
         countTime = Random.Range(spawnTime - 0.8f, spawnTime);
